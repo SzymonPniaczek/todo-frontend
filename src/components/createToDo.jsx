@@ -16,10 +16,7 @@ function CreateToDo() {
       isDone: false,
     };
     axios
-      .post(
-        "https://todo-backend-git-main-pniaczekszymons-projects.vercel.app/todo",
-        newToDo
-      )
+      .post("https://todo-backend-one-ebon.vercel.app/todo", newToDo)
       .then(() => {
         navigate("/");
         alert("succesfull added new todo");
