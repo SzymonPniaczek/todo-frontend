@@ -1,0 +1,169 @@
+.App {
+  width: 100vw;
+  height:100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #242424;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+nav {
+  width: 100%;
+  height: 8vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.todosContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+  width: 100vw;
+  height: 88vh;
+  text-align: center;
+}
+
+
+.todoObject {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #333; 
+  color: #fff;
+  width: 300px;
+  min-height: 300px;
+  margin: 10px 10px;
+  border-radius: 10px;
+  display:block;
+}
+
+.todoObject:hover{
+  cursor: pointer;
+  box-shadow: white 0px 0px 15px 0px;
+}
+
+
+.todoTitle {
+  color: #fff; 
+  font-weight: bold;
+  font-size: 300%;
+  text-align: center;
+  background-color: black;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.todoDescription {
+  color: #ccc; 
+}
+
+.todoCreatedAtDate {
+  color: #999; 
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.todoCategory {
+  color: #fff; 
+  font-style: italic;
+  background-color: #1d1d1d;
+  margin-bottom: 1vh;
+  padding: 5px;
+}
+
+.otodoObject{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #333; 
+  color: #fff;
+  width: 500px;
+  min-height: 500px;
+  margin: 10px 10px;
+  border-radius: 10px;
+  display:block;
+  text-align: center;
+}
+
+.todoWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#isCOmpleted{
+  width: 10vw;
+  height: 10vw;
+  background-color: gray;
+  appearance: none;
+}
+
+/*//////////////////////////////////////////////////////////////*/
+#isCOmpleted{
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+}
+
+#isCOmpleted:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10vw;;
+  height: 10vw;;
+  border: 2px solid #000;
+  border-radius: 3px;
+}
+
+#isCOmpleted:checked:after {
+  content: "";
+  position: absolute;
+  left: 3vw;
+  top: 5px;
+  width: 4vw;
+  height: 8vw;
+  border: solid #000;
+  border-width: 0 3px 3px 0;
+  transform: rotate(35deg);
+}
+
+/*//////////////////////////////////////////////////////////////*/
+.sortButton, .resetButton{
+  width: 6vw;
+  height: 6vh;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+.sortSelect{
+  width: 8vw;
+  height: 6vh;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+.sortInput{
+  width: 12vw;
+  height: 5vh;
+  margin-right: 5px;
+  border-radius: 10px;
+  margin-top: 5px;
+  font-size: 100%;
+}
